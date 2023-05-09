@@ -1,0 +1,61 @@
+{
+  "name": "postcss-custom-property-token-fallback",
+  "version": "0.0.1",
+  "description": "A postcss plugin that adds fallback values to custom properties.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocketCommunicationsInc/postcss-custom-property-token-fallback.git"
+  },
+  "keywords": [
+    "postcss",
+    "plugin",
+    "fallbacks",
+    "custom-properties",
+    "design-tokens"
+  ],
+  "author": "Rocket Communications Inc",
+  "license": "ISC",
+  "peerDependencies": {
+    "postcss": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/autoprefixer": "^10.2.0",
+    "autoprefixer": "^10.4.13",
+    "clean-publish": "^3.4.2",
+    "eslint": "^8.0.1",
+    "eslint-plugin-jest": "^25.2.2",
+    "jest": "^27.3.1",
+    "postcss": "^8.3.11"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended"
+    ],
+    "rules": {
+      "jest/expect-expect": "off"
+    }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/RocketCommunicationsInc/postcss-custom-property-token-fallback/issues"
+  },
+  "homepage": "https://github.com/RocketCommunicationsInc/postcss-custom-property-token-fallback#readme"
+}
