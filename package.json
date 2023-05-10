@@ -18,6 +18,16 @@
     "design-tokens"
   ],
   "author": "Rocket Communications Inc",
+  "contributors": [
+    {
+      "name": "Mark Cianfrani",
+      "url": "https://github.com/markacianfrani"
+    },
+    {
+      "name": "Micah Jones",
+      "url": "https://github.com/micahjones13"
+    }
+  ],
   "license": "ISC",
   "peerDependencies": {
     "postcss": "^8.3.0"
