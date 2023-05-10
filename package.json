@@ -1,6 +1,6 @@
 {
-  "name": "postcss-custom-property-token-fallback",
-  "version": "0.0.1",
+  "name": "@astrouxds/postcss-custom-property-token-fallback",
+  "version": "0.0.2",
   "description": "A postcss plugin that adds fallback values to custom properties.",
   "main": "index.js",
   "scripts": {
