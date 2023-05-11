@@ -1,6 +1,6 @@
-# postcss-custom-property-token-fallback
+# @astrouxds/postcss-custom-property-token-fallback
 
-[PostCSS] postcss-custom-property-token-fallback
+[PostCSS] @astrouxds/postcss-custom-property-token-fallback
 
 [PostCSS]: https://github.com/postcss/postcss
 
@@ -68,7 +68,7 @@ color: var(--my-color, #000000);
 **Step 1:** Install plugin:
 
 ```sh
-npm install --save-dev postcss postcss-custom-property-token-fallback
+npm install --save-dev postcss @astrouxds/postcss-custom-property-token-fallback
 ```
 
 **Step 2:** Check you project for existed PostCSS config: `postcss.config.js`
@@ -83,7 +83,7 @@ and set this plugin in settings.
 ```diff
 module.exports = {
   plugins: [
-+   require('postcss-custom-property-token-fallback({index: yourIndexFile })'),
++   require('@astrouxds/postcss-custom-property-token-fallback({index: yourIndexFile })'),
     require('autoprefixer')
   ]
 }
