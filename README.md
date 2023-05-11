@@ -35,7 +35,6 @@ This fallback value comes from the given index file, which should be an object w
 }
 ```
 
-If the value of a custom property isn't in the index, the custom property will reamin unchanged.
 This plugin also works for instances where multiple CSS custom props are used. For example,
 
 ```css
@@ -48,6 +47,20 @@ becomes
 ```css
 padding: var(--spacing-1, 4px) var(--spacing-2, 8px);
 margin: calc(var(--spacing-1, 4px) + var(--spacing-2. 8px));
+```
+
+If a custom property isn't in the index, the custom property will reamin unchanged.
+If a custom prop is being used with a fallback already, and that fallback doesn't match the value given in the index file, then the custom property value will be overwritten with the value from the index file.
+For example, if the current CSS looks like:
+
+```css
+color: var(--my-color, #ffffff);
+```
+
+and the index file also has a `my-color` custom prop with a different value, such as `#000000`, then the output would be:
+
+```css
+color: var(--my-color, #000000);
 ```
 
 ## Usage

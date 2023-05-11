@@ -1,4 +1,3 @@
-// const postcss = require("postcss");
 const plugin = (options) => {
   const index = options.index || {};
   return {
@@ -7,12 +6,11 @@ const plugin = (options) => {
       root.walkDecls((decl) => {
         const customProperties =
           decl.value.match(/var\((--[\w-]+)(, [^)]+)?\)/g) || [];
+        console.log(customProperties, "custom props");
+
         customProperties.forEach((property) => {
-          const [propertyName, fallbackValue] = property
-            .replace(/var\(|\)/g, "")
-            .split(", ");
-          const value =
-            fallbackValue || index[propertyName.replace("--", "")] || "";
+          const [propertyName] = property.replace(/var\(|\)/g, "").split(", ");
+          const value = index[propertyName.replace("--", "")] || "";
           if (value) {
             decl.value = decl.value.replace(
               property,
