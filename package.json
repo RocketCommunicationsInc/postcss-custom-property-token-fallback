@@ -13,6 +13,7 @@
   "keywords": [
     "postcss",
     "plugin",
+    "postcss-plugin",
     "fallbacks",
     "custom-properties",
     "design-tokens"
